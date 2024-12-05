@@ -1,0 +1,32 @@
+<div class="dashboard">
+  <aside class="sidebar">
+    <h2>Dashboard</h2>
+    <ul>
+      <li><a routerLink="/manage-sessions"><i class="fa fa-tasks"></i> Gérer les Sessions</a></li>
+      <li><a routerLink="/add-session"><i class="fa fa-plus"></i> Ajouter des sessions</a></li>
+      <li><a routerLink="/"><i class="fa fa-sign-out"></i> Déconnexion</a></li>
+    </ul>
+  </aside>
+  <main class="content">
+    <h1>Bienvenue sur le Tableau de Bord</h1>
+    <div class="stats">
+      <div class="stat-card">
+        <h3>Sessions Actives</h3>
+        <p>{{ stats.total_sessions || 0 }}</p>
+      </div>
+      <div class="stat-card">
+        <h3>Utilisateurs</h3>
+        <p>{{ stats.total_users || 0 }}</p>
+      </div>
+      <div class="stat-card">
+        <h3>Salles</h3>
+        <p>{{ stats.total_rooms || 0 }}</p>
+      </div>
+      <div class="stat-card">
+        <h3>Enseignants</h3>
+        <p>{{ stats.total_teachers || 0 }}</p>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </main>
+</div>

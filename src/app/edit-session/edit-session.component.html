@@ -1,0 +1,33 @@
+<form (ngSubmit)="saveSession()">
+    <div>
+      <label for="sessionDate">Date de la session</label>
+      <input type="date" id="sessionDate" [(ngModel)]="sessionData.session_date" name="sessionDate" required />
+    </div>
+    <div>
+      <label for="startTime">Heure de début</label>
+      <input type="time" id="startTime" [(ngModel)]="sessionData.start_time" name="startTime" required />
+    </div>
+    <div>
+      <label for="endTime">Heure de fin</label>
+      <input type="time" id="endTime" [(ngModel)]="sessionData.end_time" name="endTime" required />
+    </div>
+    <div>
+      <label for="subject">Sujet</label>
+      <input type="number" id="subject" [(ngModel)]="sessionData.subject_id" name="subject" required />
+    </div>
+    <div>
+      <label for="teacher">Professeur</label>
+      <input type="number" id="teacher" [(ngModel)]="sessionData.teacher_id" name="teacher" required />
+    </div>
+    <div>
+      <label for="room">Salle</label>
+      <input type="number" id="room" [(ngModel)]="sessionData.room_id" name="room" required />
+    </div>
+    <div>
+      <label for="class">Classe</label>
+      <input type="number" id="class" [(ngModel)]="sessionData.class_id" name="class" required />
+    </div>
+    <button type="submit">Sauvegarder</button>
+    <button type="button" (click)="cancelEdit()">Annuler</button>
+  </form>
+  

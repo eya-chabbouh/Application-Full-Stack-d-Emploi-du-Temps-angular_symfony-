@@ -1,0 +1,38 @@
+<div>
+  <h2>Liste des sessions</h2>
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Rechercher une session..." />
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Session ID</th>
+        <th>Subject ID</th>
+        <th>Teacher ID</th>
+        <th>Room ID</th> 
+        <th>Date</th>
+        <th>Heure de début</th>
+        <th>Heure de fin</th>
+        <th>Class Entity ID</th> 
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let session of filteredSessions()">
+        <td>{{ session.id }}</td>
+        <td>{{ session.session }}</td>
+        <td>{{ session.subject }}</td>
+        <td>{{ session.teacher }}</td>
+        <td>{{ session.room }}</td> 
+        <td>{{ session.session_date }}</td>
+        <td>{{ session.start_time }}</td>
+        <td>{{ session.end_time }}</td>
+        <td>{{ session.class }}</td> 
+        <td>
+          <button (click)="editSession(session.id)">Modifier</button>
+          <button (click)="deleteSession(session.id)">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

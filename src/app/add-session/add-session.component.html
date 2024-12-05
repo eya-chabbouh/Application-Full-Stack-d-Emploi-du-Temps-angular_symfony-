@@ -1,0 +1,35 @@
+<div class="session-form">
+    <h2>Ajouter une Session</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div>
+        <label for="sessionDate">Date de la session</label>
+        <input type="date" id="sessionDate" [(ngModel)]="sessionDate" name="sessionDate" required />
+      </div>
+      <div>
+        <label for="startTime">Heure de début</label>
+        <input type="time" id="startTime" [(ngModel)]="startTime" name="startTime" required />
+      </div>
+      <div>
+        <label for="endTime">Heure de fin</label>
+        <input type="time" id="endTime" [(ngModel)]="endTime" name="endTime" required />
+      </div>
+      <div>
+        <label for="subject">Sujet</label>
+        <input type="number" id="subject" [(ngModel)]="subjectId" name="subject" required />
+      </div>
+      <div>
+        <label for="teacher">Professeur</label>
+        <input type="number" id="teacher" [(ngModel)]="teacherId" name="teacher" required />
+      </div>
+      <div>
+        <label for="room">Salle</label>
+        <input type="number" id="room" [(ngModel)]="roomId" name="room" required />
+      </div>
+      <div>
+        <label for="class">Classe</label>
+        <input type="number" id="class" [(ngModel)]="classId" name="class" required />
+      </div>
+      <button type="submit">Ajouter</button>
+    </form>
+  </div>
+  
